@@ -13,7 +13,15 @@
             {
 
             <tr>
-                <td>@item.FirstName  @item.LastName  @item.MiddleName </td>
+                <td>
+                    @Html.ActionLink(@item.FirstName.ToString()+ " "+ @item.LastName.ToString() + " " + @item.MiddleName.ToString(),
+
+                     "Details",
+                     "Employee",
+                    new { id = item.Id },
+                    null)
+                </td>
+
                 <td>@item.Position </td>
             </tr>
             }

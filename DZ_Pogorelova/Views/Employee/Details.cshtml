@@ -1,0 +1,35 @@
+﻿@using DZ_Pogorelova.Models;
+@model Employee
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Информация о сотруднике @Model.FirstName @Model.LastName @Model.MiddleName</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Возраст </td>
+            <td>Должность </td>
+            <td>Дополнительная информация </td>
+        </tr>
+    </thead>
+    <tr>
+       
+
+        <tr>
+            <td> @Model.Age </td>
+
+            <td>@Model.Position</td>
+            <td>@Model.PersonCard</td>
+        </tr>
+        
+
+    </table>
+
+@Html.ActionLink("<--НАЗАД",
+
+                     "Index",
+                     "Employee",
+                   null,
+                    null)
+
