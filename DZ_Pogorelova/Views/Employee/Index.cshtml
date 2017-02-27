@@ -1,0 +1,21 @@
+﻿@using DZ_Pogorelova.Models;
+@model List<Employee>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>ФИО сотрудника </td>
+            <td>Должность</td>
+        </tr>
+</thead>
+        <tr>
+            @foreach (Employee item in Model)
+            {
+
+            <tr>
+                <td>@item.FirstName  @item.LastName  @item.MiddleName </td>
+                <td>@item.Position </td>
+            </tr>
+            }
+
+</table>
