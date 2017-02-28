@@ -1,7 +1,7 @@
 ﻿@using DZ_Pogorelova.Models;
 @model Employee
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Детали о сотруднике";
 }
 
 <h2>Информация о сотруднике @Model.FirstName @Model.LastName @Model.MiddleName</h2>
@@ -29,7 +29,5 @@
 @Html.ActionLink("<--НАЗАД",
 
                      "Index",
-                     "Employee",
-                   null,
-                    null)
+                     "Employee")
 

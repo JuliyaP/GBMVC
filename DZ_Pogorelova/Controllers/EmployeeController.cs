@@ -14,14 +14,26 @@ namespace DZ_Pogorelova.Controllers
         public ActionResult Index()
         {
             
-            return View(Emloyee.empl);
+            return View(Employee.empl);
         }
 
 
 
         public ActionResult Details(int id)
         {
-            return View(Emloyee.empl.Where(x => x.Id == id).FirstOrDefault());
+            return View(Employee.empl.FirstOrDefault(x => x.Id == id));
         }
+
+
+        [System.Web.Mvc.HttpGet]
+        public ActionResult CreateEmployee()
+        {
+            
+
+            return View("CreateEmployee");
+        }
+
+        
+
     }
 }

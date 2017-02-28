@@ -1,0 +1,59 @@
+﻿
+@using DZ_Pogorelova.Models;
+@model Employee
+
+@{
+    ViewBag.Title = "Создание сотрудника";
+}
+@*@using (Html.BeginForm("CreateEmployee", "Index", FormMethod.Post))
+{*@
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(x => x.FirstName)
+                <div>
+                    @Html.EditorFor(x => x.FirstName)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(x => x.LastName)
+                <div>
+                    @Html.EditorFor(x => x.LastName)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(x => x.MiddleName)
+                <div>
+                    @Html.EditorFor(x => x.MiddleName)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(x => x.Age)
+                <div>
+                    @Html.EditorFor(x => x.Age)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(x => x.Position)
+                <div>
+                    @Html.EditorFor(x => x.Position)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                @Html.ValidationSummary()
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Создать" />
+  

@@ -7,23 +7,23 @@
             <td>ФИО сотрудника </td>
             <td>Должность</td>
         </tr>
-</thead>
-        <tr>
-            @foreach (Employee item in Model)
+    </thead>
+    <tr>
+        @foreach (Employee item in Model)
             {
 
-            <tr>
-                <td>
-                    @Html.ActionLink(@item.FirstName.ToString()+ " "+ @item.LastName.ToString() + " " + @item.MiddleName.ToString(),
+        <tr>
+            <td>
+                @Html.ActionLink(@item.FirstName.ToString() + " " + @item.LastName.ToString() + " " + @item.MiddleName.ToString(),
 
                      "Details",
                      "Employee",
                     new { id = item.Id },
                     null)
-                </td>
+            </td>
 
-                <td>@item.Position </td>
-            </tr>
-            }
-
-</table>
+            <td>@item.Position </td>
+        </tr>
+        }   
+    </table>
+<button type="button" class="btn btn-success">Создать нового пользователя</button>
